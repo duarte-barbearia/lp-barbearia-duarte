@@ -1,0 +1,303 @@
+/* ============================================
+   RESET CSS — Universal & Mobile-first
+   Inclui fixes para iOS Safari, Android Chrome
+   ============================================ */
+
+/* Box-sizing global */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Remove margens, paddings e bordas padrão */
+* {
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+/* Previne ajuste automático de tamanho de fonte no iOS/Android */
+html {
+  -webkit-text-size-adjust: 100%;
+  -moz-text-size-adjust: 100%;
+  text-size-adjust: 100%;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-rendering: optimizeLegibility;
+  scroll-behavior: smooth;
+  line-height: 1.15;
+  font-size: 100%;
+  tab-size: 4;
+}
+
+/* Body sem overflow horizontal */
+body {
+  min-height: 100vh;
+  min-height: 100dvh; /* dynamic viewport height — fix barra de navegação mobile */
+  overflow-x: hidden;
+  line-height: 1.5;
+}
+
+/* Tipografia */
+h1, h2, h3, h4, h5, h6 {
+  font-size: inherit;
+  font-weight: inherit;
+  line-height: inherit;
+}
+
+p, span, a, li, label, input, textarea, select, button {
+  font: inherit;
+  color: inherit;
+}
+
+/* Links */
+a {
+  text-decoration: none;
+  color: inherit;
+  background-color: transparent;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Listas */
+ul, ol, menu {
+  list-style: none;
+}
+
+/* Imagens e mídia */
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+img {
+  border-style: none;
+  -webkit-user-drag: none;
+  user-select: none;
+}
+
+/* Formulários */
+input, button, textarea, select, optgroup {
+  font: inherit;
+  color: inherit;
+  background: none;
+  border: none;
+  outline: none;
+  padding: 0;
+  margin: 0;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  appearance: none;
+}
+
+button {
+  cursor: pointer;
+  background: none;
+  border: none;
+  -webkit-tap-highlight-color: transparent;
+  touch-action: manipulation;
+  user-select: none;
+}
+
+/* Remove setas de input number — Chrome, Safari, Edge, Opera */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Remove setas de input number — Firefox */
+input[type="number"] {
+  -moz-appearance: textfield;
+}
+
+/* Remove estilo de autofill do Chrome */
+input:-webkit-autofill,
+input:-webkit-autofill:hover,
+input:-webkit-autofill:focus,
+textarea:-webkit-autofill,
+textarea:-webkit-autofill:hover,
+textarea:-webkit-autofill:focus,
+select:-webkit-autofill,
+select:-webkit-autofill:hover,
+select:-webkit-autofill:focus {
+  -webkit-text-fill-color: inherit;
+  -webkit-box-shadow: 0 0 0px 1000px transparent inset;
+  transition: background-color 5000s ease-in-out 0s;
+}
+
+/* Remove outline de foco padrão — manter acessibilidade com :focus-visible */
+:focus {
+  outline: none;
+}
+
+:focus-visible {
+  outline: 2px solid currentColor;
+  outline-offset: 2px;
+}
+
+/* Textarea */
+textarea {
+  resize: vertical;
+  overflow: auto;
+}
+
+/* Tabelas */
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+/* Fieldset, legend */
+fieldset {
+  min-width: 0;
+}
+
+legend {
+  padding: 0;
+  display: table;
+  max-width: 100%;
+  white-space: normal;
+}
+
+/* Detalhes / Summary */
+details {
+  display: block;
+}
+
+summary {
+  display: list-item;
+  cursor: pointer;
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Template e hidden */
+template, [hidden] {
+  display: none;
+}
+
+/* Abbr com title */
+abbr[title] {
+  text-decoration: underline dotted;
+  border-bottom: none;
+}
+
+/* Code, pre */
+code, kbd, samp, pre {
+  font-family: monospace, monospace;
+  font-size: 1em;
+}
+
+pre {
+  overflow: auto;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Sub e Sup */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline;
+}
+
+sub { bottom: -0.25em; }
+sup { top: -0.5em; }
+
+/* Small */
+small {
+  font-size: 80%;
+}
+
+/* HR */
+hr {
+  height: 0;
+  overflow: visible;
+  border: 0;
+  border-top: 1px solid;
+  color: inherit;
+}
+
+/* Strong / b */
+b, strong {
+  font-weight: bolder;
+}
+
+/* Dialog */
+dialog {
+  padding: 0;
+  border: none;
+  background: transparent;
+}
+
+/* Progress */
+progress {
+  vertical-align: baseline;
+}
+
+/* Scrollbar — toque minimalista */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(0, 0, 0, 0.2);
+  border-radius: 3px;
+}
+
+/* ============================================
+   MOBILE SPECIFIC FIXES
+   ============================================ */
+
+/* Previne zoom em inputs no iOS (Safari requer font-size >= 16px) */
+@media screen and (max-width: 768px) {
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"],
+  input[type="number"],
+  input[type="url"],
+  input[type="search"],
+  textarea,
+  select {
+    font-size: 16px;
+  }
+}
+
+/* Fix safe-area para iPhones com notch (X, 11, 12, 13, 14, 15, 16) */
+@supports (padding: env(safe-area-inset-top)) {
+  body {
+    padding-top: env(safe-area-inset-top);
+    padding-right: env(safe-area-inset-right);
+    padding-bottom: env(safe-area-inset-bottom);
+    padding-left: env(safe-area-inset-left);
+  }
+}
+
+/* Desabilita pull-to-refresh indesejado no mobile */
+html, body {
+  overscroll-behavior-y: none;
+}
+
+/* Fix para tap-highlight em todo o documento mobile */
+* {
+  -webkit-tap-highlight-color: transparent;
+}
+
+/* Selection */
+::selection {
+  background-color: rgba(255, 203, 12, 0.3);
+  color: inherit;
+}
+
+::-moz-selection {
+  background-color: rgba(255, 203, 12, 0.3);
+  color: inherit;
+}

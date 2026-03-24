@@ -512,12 +512,12 @@ const details = [
   {
     icon: <UsersIcon weight="duotone" />,
     title: 'Turmas reduzidas',
-    description: 'No máximo 6 alunos por turma para acompanhamento individual',
+    description: 'No máximo 5 alunos por turma para acompanhamento individual',
   },
   {
     icon: <CertificateIcon weight="duotone" />,
-    title: 'Certificado',
-    description: 'Certificado de conclusão ao final da imersão',
+    title: 'Certificado FEP-CSSP',
+    description: 'Certificado de conclusão ao final do intensivo em parceria com a FEP-CSSP',
   },
 ];
 
@@ -770,12 +770,12 @@ export default function Course() {
                 height={14}
               />
             </span>
-            VAGAS ABERTAS — BARBEIRO IMERSIVO
+            VAGAS ABERTAS — BARBEIRO INTENSIVO
           </Text>
 
           <div className="course-hero__texts">
             <Text as="h1" className="course-hero__texts-title">
-              Formação de <strong>barbeiro profissional</strong> imersiva
+              Formação de <strong>barbeiro profissional</strong> intensiva
             </Text>
             <Text as="p" className="course-hero__texts-description">
               Aprenda com prática real, desenvolvimento completo e suporte adequado

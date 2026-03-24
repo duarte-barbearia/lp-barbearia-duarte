@@ -194,10 +194,10 @@ export default function Hero() {
         className='hero__content-image'
       />
       <Text as='h1' className="hero__content-title">
-        Corte seu cabelo <strong>quantas </strong> vezes quiser, pagando um valor fixo por mês!
+        Assinatura mensal para manter o visual em dia, a partir de <strong>R$99,90</strong>
       </Text>
       <Text as='p' className="hero__content-description">
-        A mais nova novidade da Barbearia Duarte, é o plano fidelidade, preços a partir de <strong>R$99,90</strong>, aproveite agora!
+        Plano de fidelidade da Barbearia Duarte com agenda flexível e valor fixo todo mês. Assine e cuide do seu estilo.
       </Text>
       <Button variant='light'>
         Virar um assinante

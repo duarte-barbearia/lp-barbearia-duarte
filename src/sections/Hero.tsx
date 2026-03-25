@@ -177,7 +177,7 @@ export default function Hero() {
           />
         ) : (
           <Img
-            src="/backgrounds/hero-mobile.png"
+            src="/backgrounds/hero-mobile2.png"
             alt="Hero background mobile"
             fill
             priority

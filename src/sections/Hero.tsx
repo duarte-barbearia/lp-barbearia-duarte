@@ -170,7 +170,7 @@ export default function Hero() {
       {
         !isMobile ? (
           <Img
-            src="/backgrounds/hero.png"
+            src="/backgrounds/hero2.png"
             alt="Hero background"
             fill
             priority

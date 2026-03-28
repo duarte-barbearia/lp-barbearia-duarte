@@ -23,14 +23,24 @@ export const metadata: Metadata = {
     template: "%s | Barbearia Duarte",
   },
   description:
-    "Barbearia premium em Montes Claros. Cortes modernos, barba perfeita e atendimento de excelência.",
-  keywords: ["barbearia", "corte de cabelo", "barba", "Barbearia Duarte"],
+    "Barbearia Duarte em Miguel Pereira, RJ. Corte de cabelo, barba e planos de assinatura com agenda flexível. Mais de 8 anos de experiência e atendimento de excelência.",
+  keywords: [
+    "barbearia",
+    "barbearia Miguel Pereira",
+    "barbearia RJ",
+    "corte de cabelo",
+    "barba",
+    "Barbearia Duarte",
+    "Clube Duarte",
+    "plano de assinatura barbearia",
+    "barbearia com plano mensal",
+  ],
   authors: [{ name: "Barbearia Duarte" }],
   creator: "Barbearia Duarte",
   openGraph: {
     title: "Barbearia Duarte",
     description:
-      "Barbearia premium em Montes Claros. Cortes modernos, barba perfeita e atendimento de excelência.",
+      "Barbearia Duarte em Miguel Pereira, RJ. Corte de cabelo, barba e planos de assinatura com agenda flexível. Mais de 8 anos de experiência e atendimento de excelência.",
     url: BASE_URL,
     siteName: "Barbearia Duarte",
     images: [
@@ -48,7 +58,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Barbearia Duarte",
     description:
-      "Barbearia premium em Montes Claros. Cortes modernos, barba perfeita e atendimento de excelência.",
+      "Barbearia Duarte em Miguel Pereira, RJ. Corte de cabelo, barba e planos de assinatura com agenda flexível. Mais de 8 anos de experiência e atendimento de excelência.",
     images: ["/open-graph.jpg"],
   },
   icons: {

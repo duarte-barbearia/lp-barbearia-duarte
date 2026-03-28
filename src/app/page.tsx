@@ -8,6 +8,7 @@ import Range from '@/sections/Range';
 import Process from '@/sections/Process';
 import About from '@/sections/About';
 import Plans from '@/sections/Plans';
+import AppDownload from '@/sections/AppDownload';
 import Course from '@/sections/Course';
 import Cta from '@/sections/Cta';
 import Footer from '@/sections/Footer';
@@ -21,6 +22,7 @@ export default function Home() {
       <Process />
       <About />
       <Plans />
+      <AppDownload />
       <Course />
       {/* <Cta /> */}
       <Footer />

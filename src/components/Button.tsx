@@ -12,6 +12,7 @@ interface ButtonProps {
   variant?: 'light' | 'dark';
   href?: string;
   onClick?: () => void;
+  id?: string;
 }
 
 const variants = {
@@ -112,12 +113,14 @@ export default function Button({
   variant = 'light',
   href = WA_LINK,
   onClick,
+  id,
 }: ButtonProps) {
   const isLink = !!href;
   const isExternal = isLink && (href.startsWith('http') || href.startsWith('mailto:'));
 
   return (
     <StyledButton
+      id={id}
       $variant={variant}
       onClick={onClick}
       as={isLink ? 'a' : 'button'}

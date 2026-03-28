@@ -71,7 +71,8 @@ const FloatButton = styled.a`
 export default function WhatsAppFloat() {
   return (
     <FloatButton
-      href={`https://wa.me/55${WHATSAPP}`}
+      id="cta-whatsapp"
+      href="https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20saber%20como%20funcionam%20os%20planos%20de%20assinatura."
       target="_blank"
       rel="noreferrer noopener"
       aria-label="Fale conosco pelo WhatsApp"

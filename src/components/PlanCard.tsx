@@ -468,7 +468,7 @@ export function PlanCard({
             </section>
 
             <footer className="plan-card__action">
-                <Button variant="light" href={whatsappLink}>Virar um assinante</Button>
+                <Button variant="light" id='cta-whatsapp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20saber%20como%20funcionam%20os%20planos%20de%20assinatura.'>Virar um assinante</Button>
             </footer>
         </PlanCardContainer>
     );

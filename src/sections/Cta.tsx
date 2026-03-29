@@ -154,7 +154,7 @@ export default function Cta() {
           <Text as='p' className='cta__content-description'>
             Nossa equipe está pronta para te atender nesse exato momento, fale conosco clicando no botão abaixo
           </Text>
-          <Button variant='light'>
+          <Button variant='light' id='contato-wpp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Gostaria%20de%20falar%20com%20a%20Barbearia%20Duarte.'>
             Entrar em contato
           </Button>
         </article>

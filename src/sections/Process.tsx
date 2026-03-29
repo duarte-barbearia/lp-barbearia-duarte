@@ -416,7 +416,7 @@ export default function Process() {
           <Text as='p' className='process__content-texts-description'>
             Temos uma equipe para te atender e te direcionar, para que você corte seu cabelo sem burocracia!
           </Text>
-          <Button variant='dark'>
+          <Button variant='dark' id='processo-wpp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20saber%20como%20funcionam%20os%20planos%20de%20assinatura.'>
             Virar um assinante
           </Button>
         </article>

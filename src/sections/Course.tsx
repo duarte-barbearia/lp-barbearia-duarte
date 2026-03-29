@@ -781,7 +781,7 @@ export default function Course() {
               Aprenda com prática real, desenvolvimento completo e suporte adequado
               durante toda a jornada para sair pronto para atender com segurança.
             </Text>
-            <Button variant="light" id='cta-whatsapp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20detalhes%20sobre%20o%20curso%20de%20barbeiro.'>
+            <Button variant="light" id='curso-wpp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20detalhes%20sobre%20o%20curso%20de%20barbeiro.'>
               Quero garantir minha vaga
             </Button>
           </div>
@@ -868,7 +868,7 @@ export default function Course() {
                 Turmas reduzidas para garantir acompanhamento individual. Não
                 fique de fora da próxima turma.
               </Text>
-              <Button variant="light" id='cta-whatsapp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20detalhes%20sobre%20o%20curso%20de%20barbeiro.'>Quero garantir minha vaga</Button>
+              <Button variant="light" id='curso-cta-wpp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20detalhes%20sobre%20o%20curso%20de%20barbeiro.'>Quero garantir minha vaga</Button>
             </article>
           </section>
         </div>

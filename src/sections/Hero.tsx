@@ -199,7 +199,7 @@ export default function Hero() {
       <Text as='p' className="hero__content-description">
         Plano de fidelidade da Barbearia Duarte com agenda flexível e valor fixo todo mês. Assine e cuide do seu estilo.
       </Text>
-      <Button variant='light' id='cta-whatsapp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20saber%20como%20funcionam%20os%20planos%20de%20assinatura.'>
+      <Button variant='light' id='inicio-wpp' href='https://api.whatsapp.com/send?phone=5524981140482&text=Ol%C3%A1!%20Quero%20saber%20como%20funcionam%20os%20planos%20de%20assinatura.'>
         Virar um assinante
       </Button>
     </div>

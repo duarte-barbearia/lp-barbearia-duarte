@@ -501,7 +501,7 @@ const CourseCta = styled.section`
 const details = [
   {
     icon: <ClockIcon weight="duotone" />,
-    title: '3 meses',
+    title: '4 meses',
     description: 'Formação estruturada com prática real, evolução técnica e acompanhamento contínuo',
   },
   {
@@ -775,7 +775,7 @@ export default function Course() {
 
           <div className="course-hero__texts">
             <Text as="h1" className="course-hero__texts-title">
-              Formação de <strong>barbeiro profissional</strong> intensiva
+              Formação de <strong>barbeiro profissional</strong> intensivo
             </Text>
             <Text as="p" className="course-hero__texts-description">
               Aprenda com prática real, desenvolvimento completo e suporte adequado

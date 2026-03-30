@@ -292,7 +292,7 @@ export default function Range() {
                   </li>
                 ))}
               </ul>
-              <Text className='range__content-infos-container-rating-content-score'>5.0/5 Avaliação </Text>
+              <Text className='range__content-infos-container-rating-content-score'>5.0/5.0 Avaliação </Text>
             </div>
           </div>
         </div>

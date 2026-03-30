@@ -516,8 +516,8 @@ const details = [
   },
   {
     icon: <CertificateIcon weight="duotone" />,
-    title: 'Certificado FEP-CSSP',
-    description: 'Certificado de conclusão ao final do intensivo em parceria com a FEP-CSSP',
+    title: 'Certificado',
+    description: 'Certificação de conclusão ao final do intensivo FEPCSSP',
   },
 ];
 

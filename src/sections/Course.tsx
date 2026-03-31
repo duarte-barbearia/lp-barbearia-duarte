@@ -502,17 +502,17 @@ const details = [
   {
     icon: <ClockIcon weight="duotone" />,
     title: '4 meses',
-    description: 'Formação estruturada com prática real, evolução técnica e acompanhamento contínuo',
+    description: 'Formação estruturada com prática real, evolução técnica e acompanhamento contínuo.',
   },
   {
     icon: <ScissorsIcon weight="duotone" />,
     title: '100% prático',
-    description: 'Você vai pegar na máquina e na tesoura desde o primeiro dia',
+    description: 'Você vai pegar na máquina e na tesoura desde o primeiro dia.',
   },
   {
     icon: <UsersIcon weight="duotone" />,
     title: 'Turmas reduzidas',
-    description: 'No máximo 5 alunos por turma para acompanhamento individual',
+    description: 'No máximo 5 alunos por turma para acompanhamento individual.',
   },
   {
     icon: <CertificateIcon weight="duotone" />,

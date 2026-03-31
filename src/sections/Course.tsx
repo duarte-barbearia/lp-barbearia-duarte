@@ -517,7 +517,7 @@ const details = [
   {
     icon: <CertificateIcon weight="duotone" />,
     title: 'Certificado',
-    description: 'Certificação de conclusão ao final do intensivo FEPCSSP',
+    description: 'Certificado com reconhecimento nacional e internacional, emitido pela FEPCSSP ao final do curso.',
   },
 ];
 

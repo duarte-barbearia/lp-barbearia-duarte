@@ -59,26 +59,8 @@ export default function SmoothScroll() {
       });
     }
 
-    /* ── Update URL hash on scroll via ScrollTrigger ── */
-    const triggers: ScrollTrigger[] = [];
-    SECTION_IDS.forEach((id) => {
-      const el = document.getElementById(id);
-      if (!el) return;
-
-      triggers.push(
-        ScrollTrigger.create({
-          trigger: el,
-          start: 'top center',
-          end: 'bottom center',
-          onEnter: () => history.replaceState(null, '', `#${id}`),
-          onEnterBack: () => history.replaceState(null, '', `#${id}`),
-        }),
-      );
-    });
-
     return () => {
       document.removeEventListener('click', handleAnchorClick);
-      triggers.forEach((t) => t.kill());
       gsap.ticker.remove(raf);
       lenis.destroy();
     };

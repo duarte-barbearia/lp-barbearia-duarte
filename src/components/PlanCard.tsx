@@ -407,6 +407,8 @@ export function PlanCard({
                         alt={name}
                         width={720}
                         height={640}
+                        sizes="(max-width: 768px) 92vw, (max-width: 1280px) 46vw, 31vw"
+                        quality={62}
                         className="plan-card__hero-image-content"
                     />
                 </div>

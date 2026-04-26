@@ -752,11 +752,11 @@ export default function Course() {
           <video
             ref={videoRef}
             src="/duarte-barbearia-video.mp4"
-            poster="/backgrounds/about.png"
+            poster="/_next/image?url=%2Fbackgrounds%2Fabout.png&w=1200&q=45"
             muted
             loop
             playsInline
-            preload="metadata"
+            preload="none"
             aria-hidden="true"
           />
         </div>
@@ -851,6 +851,8 @@ export default function Course() {
                 src="/backgrounds/about.png"
                 alt=""
                 fill
+                sizes="(max-width: 768px) 100vw, 92vw"
+                quality={52}
               />
             </div>
             <article className="course-cta__content-inner">

@@ -1,5 +1,4 @@
 @import '../styles/reset.css';
-@import 'swiper/css';
 
 :root {
   --ls-1: -0.2rem;
@@ -48,13 +47,21 @@ p strong {
 }
 
 .swiper {
+  position: relative;
+  overflow: hidden;
   width: 100%;
 }
 
 .swiper-wrapper {
+  position: relative;
+  display: flex;
+  width: 100%;
+  box-sizing: content-box;
   align-items: stretch;
 }
 
 .swiper-slide {
+  flex-shrink: 0;
+  display: block;
   height: auto;
 }

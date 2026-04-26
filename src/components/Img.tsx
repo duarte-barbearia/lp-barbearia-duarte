@@ -16,6 +16,6 @@ type ImgSizedProps = Omit<ImageProps, 'alt' | 'fill'> & {
 
 type ImgProps = ImgFillProps | ImgSizedProps;
 
-export function Img({ alt, quality = 90, ...props }: ImgProps) {
+export function Img({ alt, quality = 75, ...props }: ImgProps) {
   return <NextImage alt={alt} quality={quality} {...props} />;
 }

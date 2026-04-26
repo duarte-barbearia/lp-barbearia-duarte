@@ -279,6 +279,8 @@ export default function About() {
             alt="Foto da barbearia duarte"
             width={1472}
             height={740}
+            sizes="(max-width: 768px) 100vw, (max-width: 1280px) 92vw, 1472px"
+            quality={58}
           />
         </div>
 

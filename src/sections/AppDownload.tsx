@@ -236,100 +236,102 @@ const AppDownloadContainer = styled.section`
 `;
 
 export default function AppDownload() {
-    const sectionRef = useRef<HTMLElement>(null);
+  const sectionRef = useRef<HTMLElement>(null);
 
-    useEffect(() => {
-        const el = sectionRef.current;
-        if (!el) return;
-        if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
+  useEffect(() => {
+    const el = sectionRef.current;
+    if (!el) return;
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return;
 
-        const ctx = gsap.context(() => {
-            gsap.set('.app__content-badge', { opacity: 0, y: 12 });
-            gsap.set('.app__content-title', { opacity: 0, y: 20 });
-            gsap.set('.app__content-description', { opacity: 0, y: 16 });
-            gsap.set('.app__content-stores', { opacity: 0, y: 14 });
-            gsap.set('.app__mockup', { opacity: 0, x: 40 });
+    const ctx = gsap.context(() => {
+      gsap.set('.app__content-badge', { opacity: 0, y: 12 });
+      gsap.set('.app__content-title', { opacity: 0, y: 20 });
+      gsap.set('.app__content-description', { opacity: 0, y: 16 });
+      gsap.set('.app__content-stores', { opacity: 0, y: 14 });
+      gsap.set('.app__mockup', { opacity: 0, x: 40 });
 
-            const tl = gsap.timeline({
-                scrollTrigger: {
-                    trigger: el,
-                    start: 'top 75%',
-                    once: true,
-                },
-            });
+      const tl = gsap.timeline({
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 75%',
+          once: true,
+        },
+      });
 
-            tl
-                .to('.app__content-badge', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' })
-                .to('.app__content-title', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
-                .to('.app__content-description', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.25')
-                .to('.app__content-stores', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.2')
-                .to('.app__mockup', { opacity: 1, x: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
-        }, el);
+      tl
+        .to('.app__content-badge', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' })
+        .to('.app__content-title', { opacity: 1, y: 0, duration: 0.6, ease: 'power3.out' }, '-=0.3')
+        .to('.app__content-description', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.25')
+        .to('.app__content-stores', { opacity: 1, y: 0, duration: 0.5, ease: 'power3.out' }, '-=0.2')
+        .to('.app__mockup', { opacity: 1, x: 0, duration: 0.7, ease: 'power3.out' }, '-=0.5');
+    }, el);
 
-        return () => ctx.revert();
-    }, []);
+    return () => ctx.revert();
+  }, []);
 
-    return (
-        <AppDownloadContainer id="app" ref={sectionRef}>
-            <div className="app__container">
-                <div className="app__content">
-                    <span className="app__content-badge">Novo</span>
-                    <Text as="h1" className="app__content-title">
-                        Agende direto pelo <strong>aplicativo</strong>
-                    </Text>
-                    <Text as="p" className="app__content-description">
-                        Baixe o app da Barbearia Duarte, escolha o horário que preferir e agende seu corte ou barba em poucos toques. Prático, rápido e sem complicação.
-                    </Text>
-                    <div className="app__content-stores">
-                        <a
-                            className="app__content-store-link"
-                            href={GOOGLE_PLAY_LINK}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Baixar na Google Play"
-                        >
-                            <Img
-                                src="/icons8-google-play-store-novo-48.png"
-                                alt="Google Play"
-                                width={24}
-                                height={24}
-                            />
-                            <span className="app__content-store-link-texts">
-                                <span className="app__content-store-link-label">Disponível no</span>
-                                <span className="app__content-store-link-name">Google Play</span>
-                            </span>
-                        </a>
-                        <a
-                            className="app__content-store-link is-apple"
-                            href={APP_STORE_LINK}
-                            target="_blank"
-                            rel="noreferrer noopener"
-                            aria-label="Baixar na App Store"
-                        >
-                            <Img
-                                src="/icons8-mac-os-50.png"
-                                alt="App Store"
-                                width={24}
-                                height={24}
-                            />
-                            <span className="app__content-store-link-texts">
-                                <span className="app__content-store-link-label">Disponível na</span>
-                                <span className="app__content-store-link-name">App Store</span>
-                            </span>
-                        </a>
-                    </div>
-                </div>
+  return (
+    <AppDownloadContainer id="app" ref={sectionRef}>
+      <div className="app__container">
+        <div className="app__content">
+          <span className="app__content-badge">Novo</span>
+          <Text as="h1" className="app__content-title">
+            Agende direto pelo <strong>aplicativo</strong>
+          </Text>
+          <Text as="p" className="app__content-description">
+            Baixe o app da Barbearia Duarte, escolha o horário que preferir e agende seu corte ou barba em poucos toques. Prático, rápido e sem complicação.
+          </Text>
+          <div className="app__content-stores">
+            <a
+              className="app__content-store-link"
+              href={GOOGLE_PLAY_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Baixar na Google Play"
+            >
+              <Img
+                src="/icons8-google-play-store-novo-48.png"
+                alt="Google Play"
+                width={24}
+                height={24}
+              />
+              <span className="app__content-store-link-texts">
+                <span className="app__content-store-link-label">Disponível no</span>
+                <span className="app__content-store-link-name">Google Play</span>
+              </span>
+            </a>
+            <a
+              className="app__content-store-link is-apple"
+              href={APP_STORE_LINK}
+              target="_blank"
+              rel="noreferrer noopener"
+              aria-label="Baixar na App Store"
+            >
+              <Img
+                src="/icons8-mac-os-50.png"
+                alt="App Store"
+                width={24}
+                height={24}
+              />
+              <span className="app__content-store-link-texts">
+                <span className="app__content-store-link-label">Disponível na</span>
+                <span className="app__content-store-link-name">App Store</span>
+              </span>
+            </a>
+          </div>
+        </div>
 
-                <div className="app__mockup">
-                    <span className="app__mockup-glow" aria-hidden="true" />
-                    <Img
-                        src="/mockup.png"
-                        alt="Mockup do aplicativo Barbearia Duarte"
-                        width={380}
-                        height={760}
-                    />
-                </div>
-            </div>
-        </AppDownloadContainer>
-    );
+        <div className="app__mockup">
+          <span className="app__mockup-glow" aria-hidden="true" />
+          <Img
+            src="/mockup.png"
+            alt="Mockup do aplicativo Barbearia Duarte"
+            width={380}
+            height={760}
+            sizes="(max-width: 768px) 220px, 280px"
+            quality={60}
+          />
+        </div>
+      </div>
+    </AppDownloadContainer>
+  );
 }

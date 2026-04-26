@@ -33,9 +33,16 @@ export default function IntroAnimation({ children }: { children: React.ReactNode
     const logo = logoRef.current;
     if (!overlay || !logo) return;
 
+    const introWasShown = window.sessionStorage.getItem('duarte-intro-done') === '1';
+    if (introWasShown) {
+      setDone(true);
+      return;
+    }
+
     const prefersReduced = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
 
     if (prefersReduced) {
+      window.sessionStorage.setItem('duarte-intro-done', '1');
       setDone(true);
       return;
     }
@@ -45,6 +52,7 @@ export default function IntroAnimation({ children }: { children: React.ReactNode
     const tl = gsap.timeline({
       onComplete: () => {
         document.body.style.overflow = '';
+        window.sessionStorage.setItem('duarte-intro-done', '1');
         setDone(true);
       },
     });
@@ -54,20 +62,20 @@ export default function IntroAnimation({ children }: { children: React.ReactNode
     tl.to(logo, {
       opacity: 1,
       scale: 1,
-      duration: 0.7,
+      duration: 0.35,
       ease: 'power2.out',
-      delay: 0.15,
+      delay: 0.05,
     })
       .to(logo, {
         opacity: 0,
         scale: 1.04,
-        duration: 0.5,
+        duration: 0.22,
         ease: 'power2.in',
-        delay: 0.6,
+        delay: 0.12,
       })
       .to(overlay, {
         opacity: 0,
-        duration: 0.5,
+        duration: 0.24,
         ease: 'power2.inOut',
       }, '-=0.15');
 

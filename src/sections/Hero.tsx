@@ -1,6 +1,6 @@
 'use client';
 
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useRef } from 'react';
 import gsap from 'gsap';
 import { ScrollTrigger } from 'gsap/ScrollTrigger';
 import styled from '@emotion/styled';
@@ -109,20 +109,6 @@ const HeroContainer = styled.section`
 
 export default function Hero() {
   const sectionRef = useRef<HTMLElement>(null);
-  const [isMobile, setIsMobile] = useState(false);
-
-  useEffect(() => {
-    const onResize = () => {
-      setIsMobile(window.innerWidth < 768);
-    };
-
-    onResize();
-    window.addEventListener('resize', onResize);
-
-    return () => {
-      window.removeEventListener('resize', onResize);
-    };
-  }, []);
 
   useEffect(() => {
     const el = sectionRef.current;
@@ -135,7 +121,7 @@ export default function Hero() {
       gsap.set('.hero__content-description', { opacity: 0, y: 20 });
       gsap.set('.hero__content > a, .hero__content > button', { opacity: 0, y: 14 });
 
-      const tl = gsap.timeline({ delay: 1.8 });
+      const tl = gsap.timeline({ delay: 0.15 });
 
       tl.to('.hero__content-image', {
         opacity: 1, scale: 1, duration: 0.6, ease: 'back.out(1.8)',
@@ -167,23 +153,14 @@ export default function Hero() {
 
   return <HeroContainer id="inicio" ref={sectionRef}>
     <div className="hero__background">
-      {
-        !isMobile ? (
-          <Img
-            src="/backgrounds/hero2.png"
-            alt="Hero background"
-            fill
-            priority
-          />
-        ) : (
-          <Img
-            src="/backgrounds/hero-mobile2.png"
-            alt="Hero background mobile"
-            fill
-            priority
-          />
-        )
-      }
+      <Img
+        src="/backgrounds/hero2.png"
+        alt="Hero background"
+        fill
+        priority
+        quality={70}
+        sizes="100vw"
+      />
     </div>
     <div className="hero__content">
       <Img

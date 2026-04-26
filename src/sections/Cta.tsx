@@ -138,6 +138,8 @@ export default function Cta() {
             src="/backgrounds/about.png"
             alt=""
             fill
+            sizes="(max-width: 768px) 100vw, 92vw"
+            quality={52}
           />
         </div>
         <article className='cta__content-inner'>
